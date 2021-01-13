@@ -134,7 +134,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  border-left : 1px solid #ccc;
+  /*border-left : 1px solid #ccc;*/
 }
 
 .topnav a:hover {
@@ -283,5 +283,126 @@ span{
   font-size:13px;
   margin-bottom:0;
   text-transform: uppercase;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  /*background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);*/
+}
+
+.card_title {
+  color: #ffffff;
+  /*font-size: 1.1rem;
+  font-weight: 700;*/
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: black;
+  /*color: #ffffff;*/
+  font-style: italic;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+ul.flexbox {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+ul {
+  list-style: none
+}
+
+.ro {
+  background: slategrey;
+  display: inline-block;
+  /* inline block hack for IE 6&7 */
+  zoom: 1;
+  *display: inline;
+  padding: 4px;
+  color: white
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    display: inline-block;
+    /*background: #ffa500;*/
+    padding: 5px 20px;
+}
+.list {
+  background-color: #00783f;
+
+}
+.list a {
+    text-decoration: none;
+    color: white;
+
+}
+.flag {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 15px;
+  position: relative; 
+  background: red;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.flag:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid white;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
 }
 

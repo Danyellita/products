@@ -1,11 +1,12 @@
-<nav class="navigation" role="navigation" >
-    <div class="banner" >
+<nav class="navigation" role="navigation" style="background-color: #e46c0a;">
+    <div class="banner">
         <div class="collapse navbar-collapse" style="padding-top: 10px;">
-            <div class="container">
-                {{-- <a href="#" class="navbar-brand logo-screen">
+            <div class="container" style=" height: 20px;">
+                
+                <a href="#" class="navbar-brand logo-screen" style="z-index: 999; margin-top:-16px">
                     <img src="{{ asset('img/1.png') }}" class="logo-screen" style="width: 100px; height: 100px; z-index: 9999;">
-                </a> --}}
-                <ul class="nav navbar-nav navbar-right" style="display: inline;">
+                </a>
+                <ul class="nav navbar-nav navbar-right" style="display: inline; ">
                     <li><i class="fas fa-map-marker-alt fa-3x"></i></li>
                     <li  style="padding:5px 2px 5px 12px">OUR LOCATION<br>Moldova</li>
                     <li class="ask" style="padding:25px 14px 10px 28px">ASK FOR FREE</li>
@@ -20,20 +21,23 @@
 </nav>
 <div class="topnav" id="myTopnav">
     <div class="container">
-        <a href="#home" class="active">HOME</a>
-        <a href="#news">HOME</a>
-        <a href="#news">ABOUT US</a>
-        <a href="#contact">PRODUCTS</a>
-        <a href="#about">NEWS</a>
-        <a href="#about">CONTACTS</a>
-        <form class="navbar-form form-inline ml-auto">
-            <div class="input-wrapper">
-                <input type="text" />
-            </div>
-        </form>
-    
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
+        <div class="forphoto" style="float: right;">
+                {{-- <a href="#home" class="active">HOME</a> --}}
+                <a href="#news">HOME</a>
+                <a href="#news">ABOUT US</a>
+                <a href="#contact">PRODUCTS</a>
+                <a href="#about">NEWS</a>
+                <a href="#about">CONTACTS</a>
+                <form class="navbar-form form-inline ml-auto">
+                    <div class="input-wrapper">
+                        <input type="text" />
+                    </div>
+                </form>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </div>  
+        
   </a>
 
     </div>

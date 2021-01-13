@@ -22,7 +22,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('web.homepage');
+Route::get('/home', 'CatalogController@index')->name('web.homepage');
+Route::get('/products/get-data', 'CatalogController@getData')->name('web.getData');
+// Route::get('/pro')
 
 Route::prefix('manage')->middleware('auth')->group(function() {
 

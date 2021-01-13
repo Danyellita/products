@@ -4,19 +4,45 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
+use DB;
+use App\Enums\CategoryType;
 
-class ProductController extends Controller
+class CatalogController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function getData(Request $request) {
+        $products = (new Product)->newQuery();
+        //has(ex:type)->request, not allways coresponds with the name of the column
+        if ($request->has('type') && !is_null($request->type)) {
+            $products->type(CatalogType::getValue($request->type));
+            $products = $products->get();
+        }
+        //  $view = view('admin.users.data', ['users' => $users])->render();
+
+        // return $view;
+        
+        return view('web.data')->with(compact('products'));
+
+    }
+    public function index(Request $request)
     {
         $products = Product::all();
-        
-        return view('web.products', compact('products'));
+        $categories = Category::all();
+        $products = (new Product)->newQuery();
+        //has(ex:type)->request, not allways coresponds with the name of the column
+        if ($request->has('type') && !is_null($request->type)) {
+            $products->type(CategoryType::getValue($request->type));
+            $products = $products->get();
+        }
+
+               
+        return view('web.products', compact('products', 'categories'));
     }
 
     /**
