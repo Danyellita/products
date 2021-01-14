@@ -30,7 +30,7 @@ class ProductController extends Controller
             $imageExtension = $request->file('image')->getClientOriginalExtension();
             $newFullFileName = $imageName . '.' . $imageExtension;
             
-            Storage::disk('public')->putFileAs('/img', $request->file('image'), $newFullFileName);    
+            Storage::disk('local')->putFileAs('/img', $request->file('image'), $newFullFileName);    
         }
 
         $product = Product::create([
