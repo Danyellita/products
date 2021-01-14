@@ -13,9 +13,15 @@
 						<div class="row">
 							<div class="col-6">
 								<input type="text" class="form-control" name="name" id="input" placeholder="Product Name">
+								@if($errors->has('name'))
+									<p class="errors" style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('name') }}</p>
+			    				@endif
 							</div>
 							<div class="col-6">
 								<input type="text" class="form-control" name="price" id="input" placeholder="Price">
+								@if($errors->has('price'))
+									<p style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('price') }}</p>
+			    				@endif
 							</div>
 						</div>
 						<div class="row">
@@ -33,7 +39,8 @@
 				                    @endforeach
 			                    </select>
 		                	</div>
-						</div>
+		                </div>
+						<div style="margin-left: 5px;">{{ __('*all fields must be completed') }}</div>
 					</div>
 					<div class="card-footer">
 						<center>

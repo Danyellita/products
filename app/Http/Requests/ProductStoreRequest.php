@@ -29,8 +29,8 @@ class ProductStoreRequest extends FormRequest
     {
         return [
             'name.required' => 'Please fix this field.',
-            'email.required'  => 'Please fix this field.',
-            'password.required' => 'Please fix this field.', 
-        ]
+            'details.required'  => 'Please fix this field.',
+            'price.required' => 'Please fix this field.', 
+        ];
     }
 }

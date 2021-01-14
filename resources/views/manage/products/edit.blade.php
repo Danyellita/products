@@ -15,13 +15,19 @@
 						    <tbody>
 						        <tr scope="row">
 						            <th scope="row">{{ __('Name product') }}</th>
-						            <td><input type="text" class="form-control" name="name" style="width: 50%;" value="{{$product->name}}">@if($errors->has('name'))
-									<p style="background-color: #FFB6C1; margin-top: 2px;">{{ $errors->first('name') }}</p>
-				    			@endif</td>
+						            <td><input type="text" class="form-control" name="name" style="width: 50%;" value="{{$product->name}}">
+							            @if($errors->has('name'))
+											<p style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('name') }}</p>
+					    				@endif
+					    			</td>
 						        </tr>
 						        <tr scope="row">
 						            <th scope="row">{{ __('Price') }}</th>
-						            <td><input type="text" class="form-control" name="price" style="width: 50%;" value="{{ $product->price }}"></td>
+						            <td><input type="text" class="form-control" name="price" style="width: 50%;" value="{{ $product->price }}">
+						            	 @if($errors->has('price'))
+											<p style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('price') }}</p>
+					    				@endif
+					    			</td>
 						        </tr>
 						        <tr scope="row">
 						            <th scope="row">{{ __('Details') }}</th>
