@@ -9,18 +9,16 @@ class Product extends Model
 	protected $guarded = [
     	'id'
     ];
-    
-    public function category()
-    {
-    	return $this->belongsTo(Category::class);
-    }
-
     protected static function boot()
     {
         parent::boot();
         static::creating(function ($model) {
              $model->slug = str_slug($model->name, '-') . '-' . rand(1,10);
         });
+    }
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
     protected $enumCasts = [
         'type' => CategoryType::class,
@@ -40,16 +38,17 @@ class Product extends Model
     {
         return $query->where('type', 1);
     }
-    public function scopetype($query, $type)
+    public function scopesanitation($query)
+    {
+        return $query->where('type', 2);
+    }
+    public function scopetop($query)
+    {
+        return $query->where('type', 3);
+    }
+    public function scopeType($query, $type)
     {
         return $query->where('type', $type);
     }
-     public function scopesanitation($query)
-    {
-        return $query->where('categories', 0);
-    } 
-     public function scopetop($query)
-    {
-        return $query->where('categories', 0);
-    }   
+     
 }

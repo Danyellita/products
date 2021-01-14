@@ -22,9 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'CatalogController@index')->name('web.homepage');
-Route::get('/products/get-data', 'CatalogController@getData')->name('web.getData');
-// Route::get('/pro')
+Route::get('/', 'CatalogController@index')->name('web.homepage');
 
 Route::prefix('manage')->middleware('auth')->group(function() {
 
@@ -32,9 +30,7 @@ Route::prefix('manage')->middleware('auth')->group(function() {
 	Route::get('/users/create', 'UserController@create')->name('manage.users.create');
 	Route::post('/users', 'UserController@store')->name('manage.users.store');
 	Route::get('/users/{id}', 'UserController@show')->name('manage.users.show');
-	Route::get('/users/{id}/edit', 'UserController@edit')->name('manage.users.edit');
-	Route::put('/users/{id}', 'UserController@update')->name('manage.users.update');
-
+	
 	Route::get('/products', 'ProductController@index')->name('manage.products.index');
 	Route::get('/products/create', 'ProductController@create')->name('manage.products.create');
 	Route::post('/products', 'ProductController@store')->name('manage.products.store');

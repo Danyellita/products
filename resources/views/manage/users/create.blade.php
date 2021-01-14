@@ -2,7 +2,7 @@
 @section('content')
 	<div class="container-fluid pb-2" id="fluid">
 		<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 rounded box-shadow bg-white pb-2 pt-2" id="cards">
-			<a href="{{ route('manage.users.index') }}" class="btn btn-success" style="margin: 10px 0px 10px 0px;">Back</a>
+			<a href="{{ route('manage.users.index') }}" class="btn btn-success" id="admin-button">Back</a>
 			<div class="card">
 				<form method="POST" action="{{ route('manage.users.store') }}">
 					@csrf
@@ -35,7 +35,7 @@
 					</div>
 					<div class="card-footer">
 						<center>
-							<input type="submit" class="btn btn-success" value="Save" style="margin: 10px; width: 100px;">
+							<input type="submit" class="btn btn-success" id="save" value="Save">
 						</center>
 					</div>
 				</form>

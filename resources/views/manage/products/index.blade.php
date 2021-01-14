@@ -2,7 +2,7 @@
 @section('content')
 	<div class="container-fluid pb-2" id="fluid">
 		<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 rounded box-shadow bg-white pb-2 pt-2" id="cards">
-			<a href="{{ route('manage.products.create') }}" class="btn btn-success" style="margin: 10px 0px 10px 0px;">New Product</a>
+			<a href="{{ route('manage.products.create') }}" class="btn btn-success" id="admin-button">New Product</a>
 			<div class="card">
 				<div class="card-header" style="text-align: center;">
 					<h3><strong>{{ __('Manage Products') }}</strong></h3>
@@ -12,14 +12,9 @@
 						<thread>
 							<tr>
 								<th>ID</th>
-								<th>District</th>
-								<th>Category</th>
-								<th>Composition</th>
-								<th>Region</th>
-								<th>Packing Quantity</th>
-								<th>Weight</th>
-								<th>Product Measurent</th>
-								<th>Pharmacy</th>
+								<th>Name</th>
+								<th>Price</th>
+								<th>Details</th>
 								<th>Actions</th>
 							</tr>
 						</thread>
@@ -30,28 +25,13 @@
 										{{ $product->id }}
 									</td>
 									<td>
-									{{ $product->name }}	
+										{{ $product->name }}	
 									</td>
 									<td>
-										{{ $product->category->name}}
+										{{ $product->price}}
 									</td>
 									<td>
-										{{ $product->composition }}
-									</td>
-									<td>
-										{{ $product->region->name }}
-									</td>
-									<td>
-										{{ $product->packing_quantity }}
-									</td>
-									<td>
-										{{ $product->weight }}
-									</td>
-									<td>
-										{{ $product->product_measurement }}
-									</td>
-									<td>
-										{{ $product->pharmacy->name }}
+										{{ $product->details }}
 									</td>
 									<td>
 										<a href="{{ route('manage.products.show', $product->id) }}"><i class="fas fa-eye"></i></a>
@@ -62,7 +42,6 @@
 							
 						</tbody>
 					</table>	
-					{{ $products->links() }}	
 				</div>
 			</div>
 		</div>

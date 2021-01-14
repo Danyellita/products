@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Enums\CategoryType;
 
 class CreateProductsTable extends Migration
 {
@@ -20,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->decimal('price', 5, 2);
             $table->string('details');
             $table->string('image')->nullable();
-            $table->boolean('type', ['0', '1']);
+            $table->boolean('type', [0, 1]);
             $table->timestamps();
 
         });

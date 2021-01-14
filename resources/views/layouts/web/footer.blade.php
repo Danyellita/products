@@ -32,22 +32,22 @@
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
-                    <h3>Company Name</h3>
+                    <h3>Form</h3>
                 	<hr>
                 	<form>
-                		<div class="form-group">
-					    	<input type="text" class="form-control"  placeholder="Name $ Surname">
+                		<div class="form-group" id="form">
+					    	<input type="text" class="form-control"  placeholder="Name & Surname">
 					  	</div>
-					  	<div class="form-group">
+					  	<div class="form-group" id="form">
 					    	<input type="text" class="form-control"  placeholder="Email andress">
 					  	</div>
-					  	<div class="form-group">
+					  	<div class="form-group" id="form">
 					    	<input type="text" class="form-control"  placeholder="Subject">
 					  	</div>
-					  	<div class="form-group">
+					  	<div class="form-group" id="form">
 					    	<textarea class="form-control"  rows="3" placeholder="Your Message"></textarea>
 					  	</div>
-					  	<button type="submit" class="btn btn-primary" style="float: right">Send</button>
+					  	<button type="submit" class="btn" id="send"><strong>SEND</strong></button>
                 	</form>
                 </div>
             </div>
