@@ -7,7 +7,7 @@
 				<div class="card-header" style="text-align: center;">
 					<h3><strong>{{ __('Manage Products') }}</strong></h3>
 				</div>
-				<div class="card-body">
+				<div class="card-body" id="card-body">
 					<table class="table table-striped">
 						<thread>
 							<tr>

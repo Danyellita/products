@@ -13,19 +13,19 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col-4">
+							<div class="col">
 								<input class="form-control" type="text" name="name" placeholder="Name">
 								@if($errors->has('name'))
 									<p style="background-color: #FFB6C1; margin-top: 2px;">{{ $errors->first('name') }}</p>
 				    			@endif
 							</div>
-							<div class="col-4">
+							<div class="col">
 								<input class="form-control" type="text" name="email" placeholder="Email">
 								@if($errors->has('email'))
 									<p style="background-color: #FFB6C1; margin-top: 2px;">{{ $errors->first('email') }}</p>
 				    			@endif
 							</div>
-							<div class="col-4">
+							<div class="col">
 								<input class="form-control" type="password" name="password" placeholder="Password">
 								@if($errors->has('password'))
 									<p style="background-color: #FFB6C1; margin-top: 2px;">{{ $errors->first('password') }}</p>

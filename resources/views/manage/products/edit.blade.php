@@ -36,7 +36,7 @@
 						        
 						        <tr scope="row">
 						         	<th scope="row">Update the photo</th>
-						         	<td><input type="file" name="image" class="form-control"></td>
+						         	<td><input type="file" name="image" class="form-control" style="width: 50%;"></td>
 						         </tr>
 						         
 						    </tbody>

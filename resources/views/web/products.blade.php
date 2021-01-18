@@ -2,10 +2,10 @@
 @section('content')
 	<div class="container" id="products">
 		<div class="row">
-			<div class="col col-2">
+			<div class="ol-md-5 col-lg-5 col-xs-12 col-sm-12">
 				<h4 style="margin-left: 10px;"> {{ __('FILTER:') }}</h4>
 			</div>
-			<div class="col col-10">
+			<div class="ol-md-5 col-lg-5 col-xs-12 col-sm-12">
 				<select class="form-control" name="type" id="category_type" onfocus='this.size=10;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
 		    	<option value="">All</option>
 					@foreach(\App\Enums\CategoryType::getInstances() as $enum)
@@ -25,17 +25,19 @@
 							</div>
 						</div>
 				        <center><h4 class="card_title" style="color: black; padding-top: 30px;">{{ $product->name }}</h4></center>
-				      	<div class="card_image">
-				      		@if($product->image)
-		  						<img src="{{ asset('storage/img')}}/{{ $product->image }}" class="photo" width="230" height="200">
+				        <a href="#" id="img">
+				        	@if($product->image)
+		  						<img src="{{ asset('storage/img')}}/{{ $product->image }}" class="photo">
 		  					@else
 		  						<img src="{{ asset('img/1.png')}}" class="not_image">
 		  					@endif 
-		  				</div>
-				        <div class="card_content">
+				        </a>
+				      	<div class="card_content">
 				          	<p class="card_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit <br>sed do eiusmod...<span style="color:green">Details</span></p>
 				          	<ul class="button">
-				          		<li class="list"><a href="#" style="padding: 20px;">Byt</a></li><li class="list"><a href="#">Add to Cart</a></li>
+				          		<center>
+				          			<li class="list" style="padding: 5px 25px 5px 25px;"><a href="#">Byt</a></li><li class="list"><a href="#">Add to Cart</a></li>
+				          		</center>
 					    	</ul>
 				        </div>
 				    </div>

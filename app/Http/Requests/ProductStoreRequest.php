@@ -22,6 +22,8 @@ class ProductStoreRequest extends FormRequest
             'name' => 'required|string|max:10',
             'details' => 'required',
             'price' => 'required',
+            'image' => 'required',
+            'type' => 'required',
         ];
     }
 
@@ -31,6 +33,8 @@ class ProductStoreRequest extends FormRequest
             'name.required' => 'Please fix this field.',
             'details.required'  => 'Please fix this field.',
             'price.required' => 'Please fix this field.', 
+            'image.required' => 'Please fix this field.', 
+            'type.required' => 'Please fix this field.', 
         ];
     }
 }

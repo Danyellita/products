@@ -11,13 +11,13 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col-6">
+							<div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
 								<input type="text" class="form-control" name="name" id="input" placeholder="Product Name">
 								@if($errors->has('name'))
 									<p class="errors" style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('name') }}</p>
 			    				@endif
 							</div>
-							<div class="col-6">
+							<div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
 								<input type="text" class="form-control" name="price" id="input" placeholder="Price">
 								@if($errors->has('price'))
 									<p style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('price') }}</p>
@@ -25,22 +25,28 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col col-3">
+							<div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
 								<input ttype="text" class="form-control"  name="details" id="input" placeholder="Details">
+								@if($errors->has('details'))
+									<p style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('details') }}</p>
+			    				@endif
 							</div>
-							<div class="col col-3">
+							<div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
 								<input type="file" class="myfrm form-control"  name="image"  id="input">
+								@if($errors->has('image'))
+									<p style="color: #FFB6C1; margin-top: 2px;  margin-left: 5px; padding:5px;">{{ $errors->first('image') }}</p>
+			    				@endif
 							</div>
-							<div class="col col-3" style="margin-left: 5px;">
-								<select name="type" id="#" class="form-control" style="margin-top: 5px;">
-									<option selected>Choose...</option>
+							<div class="col" style="margin-left: 5px;">
+								<select name="type" id="select" class="form-control" style="margin-top: 5px;">
+									<option selected>Choose Type...</option>
 				                    @foreach(\App\Enums\CategoryType::getInstances() as $enum)
 				                        <option value="{{ $enum->value }}"> {{ $enum->description }}</option>
 				                    @endforeach
 			                    </select>
-		                	</div>
+			                    <label style="color: #FFB6C1;">*required</label>
+			                </div>
 		                </div>
-						<div style="margin-left: 5px;">{{ __('*all fields must be completed') }}</div>
 					</div>
 					<div class="card-footer">
 						<center>

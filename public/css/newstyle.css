@@ -15,22 +15,30 @@ form {
   .sidebar {
     width: 100%;
     height: auto;
+    position: fixed;
     z-index: 1;
   }
   .sidebar a {
     float: left;
   }
+  /*.sidebar a {float: left;}*/
+  div.content {margin-left: 0;}
   .content-wrapper {
     margin-left: 0;
+    padding-top:1rem;
+    min-height: calc(100vh - 0px);
   }
   .card{
+    overflow: auto;
+  }
+  #card-body {
     overflow: auto;
   }
   #fluid {
     padding-top: 200px;
    }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -42,12 +50,17 @@ form {
   }
   .content-wrapper {
     margin-left: 0;
+    padding-top: 100px; 
+    min-height: calc(100vh - 0px);
   }
   .card{
     overflow: auto;
   }
+  #card-body {
+    overflow: auto; margin-right:20px;
+  }
   #fluid {
-    padding-top: 300px;
+    padding-top: 150px;
   }
 }
 
@@ -55,11 +68,12 @@ form {
   padding: 0px;
 }
 @media screen and (min-width: 701px){
-.content-wrapper {
-  margin-left:210px; 
-  padding-top: 100px; 
-  margin-right: 10px;
-}
+  .content-wrapper {
+    margin-left:210px; 
+    padding-top: 100px; 
+    margin-right: 10px;
+    min-height: calc(100vh - 0px);
+  }
 }
 .sidebar a {
   display: block;
@@ -76,16 +90,6 @@ form {
 .sidebar a:hover:not(.active) {
   background-color: #555;
   color: white;
-}
-
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: fixed;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
 }
 
 @media screen and (max-width: 400px) {
@@ -129,14 +133,6 @@ form {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -147,6 +143,11 @@ form {
     float: none;
     display: block;
     text-align: left;
+  }
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
 }
 .test{
@@ -425,6 +426,7 @@ body, html{
     width:100%;
     position: absolute;
     overflow: auto;
+    min-height: 100%;
 }
 
 .responsive {
@@ -507,4 +509,28 @@ body, html{
   opacity: 30%; 
   text-align: center; 
   font-size:20px;
+}
+#img {
+  height: 0;
+  padding-bottom: 66.67%;
+  height: auto;
+  border: 2px solid white;
+  position: relative;
+  width: 100%;
+}
+
+#img .photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  transform: translate(-50%, -50%)
+}
+
+#img .not_image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  transform: translate(-50%, -50%)
 }
