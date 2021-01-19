@@ -38,14 +38,7 @@ class Product extends Model
     {
         return $query->where('type', 1);
     }
-    public function scopesanitation($query)
-    {
-        return $query->where('type', 2);
-    }
-    public function scopetop($query)
-    {
-        return $query->where('type', 3);
-    }
+    
     public function scopeType($query, $type)
     {
         return $query->where('type', $type);
