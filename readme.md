@@ -1,4 +1,4 @@
-# Larticles Laravel
+# Products Laravel
 
 > Laravel 5.8 
 
@@ -13,7 +13,7 @@ composer install
 # Run Migrations
 php artisan migrate
 
-# Import Articles
+# Import Products
 php artisan db:seed
 
 # If you get an error about an encryption key
