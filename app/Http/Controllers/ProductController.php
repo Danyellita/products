@@ -40,18 +40,21 @@ class ProductController extends Controller
             'image'=> $newFullFileName,
             'type' => $request->type,
         ]);
+
         return redirect()->route('manage.products.show', $product->id);
     }
 
     public function show($id)
     {
         $product = Product::find($id);
+
         return view('manage.products.show', compact('product'));
     }
 
     public function edit($id)
     {
         $product = Product::find($id);
+        
         return view('manage.products.edit', compact('product'));
     }
 

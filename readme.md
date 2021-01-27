@@ -25,7 +25,7 @@ npm install
 # Watch Files
 npm run watch
 
-# List all products with links and meta
+# List all products
 /
 
 #Dashboard
